@@ -185,10 +185,10 @@ local function createStyledButton(text, order, color)
 	return btn
 end
 
-local hatchBtn = createStyledButton("🥚 Hatch Random Pets", 1, Color3.fromRGB(255, 0, 128))
-local espBtn = createStyledButton("👁️ ESP: ON", 2, Color3.fromRGB(50, 50, 50))
-local autoBtn = createStyledButton("🔄 Auto Randomize: OFF", 3, Color3.fromRGB(0, 170, 0))
-local loadAgeBtn = createStyledButton("📜 Load Pet Age 50 Script", 4, Color3.fromRGB(40, 40, 40))
+local hatchBtn = createStyledButton("🥚 Hatch Randomize Pets", 1, Color3.fromRGB(255, 0, 128))
+local espBtn = createStyledButton("👁️ ESP: ON / OFF", 2, Color3.fromRGB(50, 50, 50))
+local autoBtn = createStyledButton("🔁 Auto Randomizer: ON / OFF", 3, Color3.fromRGB(0, 170, 0))
+local loadAgeBtn = createStyledButton("📜 Load Pet Age 50", 4, Color3.fromRGB(40, 40, 40))
 local mutationBtn = createStyledButton("💀 Pet Mutation Finder", 5, Color3.fromRGB(200, 100, 100))
 
 -- Button Functions
@@ -202,8 +202,9 @@ end)
 
 autoBtn.MouseButton1Click:Connect(function()
 	autoRandomizerOn = not autoRandomizerOn
-	autoBtn.Text = autoRandomizerOn and "🔄 Auto Randomize: ON" or "🔄 Auto Randomize: OFF"
+	autoBtn.Text = autoRandomizerOn and "🔁 Auto Randomizer: ON" or "🔁 Auto Randomizer: OFF"
 end)
+
 
 hatchBtn.MouseButton1Click:Connect(function()
 	for _, data in pairs(displayedEggs) do
